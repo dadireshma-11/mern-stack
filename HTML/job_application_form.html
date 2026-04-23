@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       
+    
+</head>
+<body>
+    <from action="" method="post">
+        <fieldset>
+            <h1>Job Application</h1>
+            <label for="fname">Frist Name :</label>
+            <input type="text" id="fname" maxlength="8" minlength="3" required placeholder="Enter Frist Name">
+
+            <br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Enter Last Name" minlength="3" maxlength="5">
+
+            <br><br>
+            <label for="Email">Email :</label>
+            <input type="text" id="Email" required placeholder="Enter Email">
+
+            <br><br>
+            <label for="Date of Birth">Date of Birth :</label>
+            <input type="Date" id="Date of Birth" >
+
+            <br><br>
+            <label for="phone no">phone no :</label>
+            <input type="tel" pattern="[6-9]{1}[0-9]{9}" id="phone no" required placeholder="+91">
+
+            <br><br>
+            <label for="state">state :</label>
+            <select Name="" id="state">
+                <option value="AP">AP</option>
+                <option value="KA">KA</option>
+                <option value="KL">KL</option>
+                <option value="DL">DL</option>
+            </select>
+
+            <br><br>
+            <label for="Address">Address :</label>
+            <textarea name="" rows="3" cols="30" id="address" placeholder="Enter full address"></textarea>
+
+            <br><br>
+            <label for="Gender">Gender :</label>
+            <input type="radio" id="male" name="Gender" value="male">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="Gender" value="female">
+            <label for="female">female</label>
+             
+            <br><br>
+            <label for="skill">skill</label>
+            <input type="checkbox"> Nodejs
+            <input type="checkbox"> CI/CD 
+            <input type="checkbox">mangodb
+            <input type="checkbox">git 
+
+            <br><br>
+            <label for="">language</label>
+            <input type="range">English
+            <input type="range">Telugu
+            <input type="range">Hindi
+
+            <br><br>
+
+            <button type="submit">submit</button>
+        </fieldset>
+    </from>
+
+    
+</body>
+</html> 
