@@ -1,0 +1,22 @@
+css:
+----
+  ->CSS stands for cascading style sheet used to apply stylings,layouts,animations to the wed page
+  ->CSS are introduced in the year 1994 by the developer "hokon wium lie"
+  ->the present version of CSS is CSS3
+
+methods to aply stylings to web page:
+-------------------------------------
+    1.Inline CSS/inline stylings
+     ->appling styling by taking 'style attribute' in HTML element 
+     ->this styling is application for only that element
+     ->for inline CSS not required CSS selectors
+     ->inline styling is more priority then internal & external CSS
+
+   2.Internal CSS/Internal stylings :
+      ->appling styling by taking <style></style> tag in head part is called as internal CSS
+      ->to apply internal CSS we need CSS selectors
+
+   3.External CSS/External stylings :
+      ->apply styling by taking new .CSS file and link
+      ->to apply external CSS we need CSS selectors
+

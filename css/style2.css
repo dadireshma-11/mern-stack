@@ -1,0 +1,20 @@
+label{
+    color:brown;
+    font-weight: bold;
+    font-size: 25px;
+}
+label::after{
+    content: "*";
+    color: mediumblue;
+}
+label:first-of-type::before{
+    content:"👍";
+}
+label:last-of-type::before{
+    content:"👌";
+}
+   
+button{
+    background-color: lawngreen;
+    padding: 10px 30px;
+}

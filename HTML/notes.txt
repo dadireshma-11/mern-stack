@@ -341,8 +341,70 @@ media tags :
      <audio></audio> are used to diaplay audio in webpages
 
    Audio Attributes :
-   -------------------
-        
+   -----------------
+          
+     1.src(source)
+     2.controls
+     3.muted
+     4.loop
+     5.autoplay
+
+ 2.video 
+  <videos> are used to display the video in webpages
+  video tag Attributes:
+  -------------------
+  1.src
+  2.controls
+  3.muted
+  4.loop
+  5.audioplay
+  6.heig
+  
+  
+  3. ifame
+       ><ifame> are used to embed google maps,youtube videos,documents, websites , webpages........
+
+
+    iframe attributes:
+    -----------------
+    1.src
+    2.frameborder
+    3.height
+    4.width     
+
+Anchor tag:
+----------
+  -><a></a> tag used to link external wed sites, web pages,documents,javascript alert message ..etc
+  -><a></a> tag content default color : blue
+  ->active <a></a>  tag content color :red 
+  ->visited <a></a> tag content color :purple
+
+  Anchor tag Attributes :
+  ---------------------
+    1.href: it will accept url or path as a value 
+    2.target: it will decide the page will open in new tab or same tab based on the value [_blank,_self,_top,_parent]
+    3.download 
+
+semantic tags:
+-------------
+  ->semantic tags are used to build proper structure of code/wed page
+  ->using semantic tags we can increase SEO(search engine optimization) and also increase the code readability
+  ->semantic are developer friendly
+
+    semantic tags link:
+    -------------------
+        1.<header></header> 
+        2.<footer></footer>   
+        3.<nav></nav>
+        4.<main></main>
+        5.<section></section> 
+        6.<figure></figure>
+        7.<details></details>
+        8.<aside></aside>
+        9.<article></article>
+        10.<strong></strong>
+        11.<em></em>   
+
 
 
 
