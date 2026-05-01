@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 2;
+        }
+
+        ol {
+            background-color: purple;
+            padding: 20px 0px;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+
+        }
+
+        li {
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 2px black;
+            color: rgb(10, 10, 10);
+            background-color: burlywood;
+            padding: 10px;
+            border-radius: 8px;
+            flex-grow: 1;
+            margin: 10px 30px;
+            text-align: center;
+        }
+
+        video {
+            width: 100vw;
+            height: 500px;
+        }
+
+        #electronic-devices {
+            padding-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            bottom: 150px;
+            backdrop-filter: blur(10px);
+            background-image: linear-gradient(transparent, rgb(250, 193, 193), rgb(43, 40, 40));
+        }
+
+
+
+        #electronic-devices-section {
+            position: relative;
+            bottom: 80px;
+            left: 40px;
+            z-index: 1;
+            font-size: 40px;
+            font-style: italic;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #electronic-devices-section:hover {
+            text-decoration: underline;
+            text-shadow: 2px 2px 2px aliceblue;
+            color: rgb(54, 53, 53);
+            cursor: pointer;
+            transform: scaleY(1.5);
+        }
+
+
+        #electronic-devices>div {
+            height: 450px;
+            width: 350px;
+            border-top: 5px solid aliceblue;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: rgb(79, 79, 134);
+           
+            animation-name: moving;
+            animation-duration: 4s;
+        }
+
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 40%;
+            backdrop-filter: blur(10px);
+            text-shadow: 4px 4px 4px aliceblue;
+            padding: 10px 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px black;
+            animation-name: scaling;
+            animation-duration: 3s;
+        }
+
+
+        #product-card img {
+            height: 250px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        #product-card img:hover {
+            transform: skew(10deg);
+            box-shadow: 2px 2px 8px aliceblue;
+        }
+
+        .product-info h4 {
+            font-size: 20px;
+        }
+
+        .product-info h4,
+        p {
+            color: aliceblue;
+            margin-left: 25px;
+            font-style: italic;
+        }
+
+        .btn-container>button {
+            padding: 10px 20px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 8px;
+            border: none;
+            margin: 0px 20px;
+            font-style: italic;
+            font-size: 19px;
+        }
+
+        .btn-container>button:first-child {
+            background-color: #00ff00;
+        }
+
+        .btn-container>button:last-child {
+            background-color: #f34747;
+        }
+
+        aside {
+            position: fixed;
+            top: 40%;
+            padding: 25px 10px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            z-index: 1;
+            margin-left: 10px;
+            border-radius: 50px;
+            height: 250px;
+            background-image: radial-gradient(transparent, black);
+        }
+
+        aside img:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 5px black;
+            transform: translateX(10px);
+        }
+
+        aside img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+
+
+        @keyframes scaling {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateY(200px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        body{
+            background-color: aliceblue;
+            animation-name: bgColorChange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+        }
+
+        @keyframes bgColorChange{
+            0%{
+                background-color: aliceblue;
+            }
+            10%{
+                background-color: #00ff00;
+            }
+            20%{
+                background-color: #f34747;
+            }
+            30%{
+                background-color: aqua;
+            }
+            40%{
+                background-color: brown;
+            }
+            50%{
+                background-color: pink;
+            }
+            60%{
+                background-color: blue;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li>HELP</li>
+            <li>LOGIN</li>
+        </ol>
+    </nav>
+
+    <main>
+        <section id="background-video">
+            <video src="./gb_video.mp4" loop autoplay></video>
+        </section>
+        <section>
+            <h1>Welcome to Alpha Mart</h1>
+        </section>
+        <h2 id="electronic-devices-section">Electronic Devices :</h2>
+        <section id="electronic-devices">
+
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+
+
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_QSZjnzU21iMjfedGuwdmyXhDNRBxerT1A&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Mac Laptop</h4>
+                    <h4>Cost: ₹50000</h4>
+                    <h4>Ratings:4.5/5 </h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, fugiat. Maiores quam
+                        debitis quos reprehenderit. </p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add card</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <aside>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdJ1XDZ5uHWAD6HZSo9tMVJL8dXgeRQ-WwRQ&s"
+                    alt="">
+
+                <img src="https://img.freepik.com/premium-vector/linkedin-icon_488108-5.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMzzD6f3koNe85VpRQTe_ENbChN5A8IHNrbw&s"
+                    alt="">
+
+                <img src="https://img.freepik.com/premium-vector/circle-whatsapp-logotype-icon-social-media-app-network-application-popular-editorial-brand-vector-illustration_913857-391.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="">
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>
