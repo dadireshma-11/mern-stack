@@ -1,0 +1,319 @@
+JAVASCRIPT :
+------------
+    -->JAVASCRIPTis the scripting language as well as programming language
+
+Why we need JS:
+--------------
+    -->To build dynamic web application
+    -->To add functionality to the web application
+    -->Tomanipulate HTML and CSS
+    -->To Achieve DOM(Document Object Model) functionalities
+    -->To fetch data from server (API) aand also to send data to server JS is required
+
+
+DIFFERENCE BETWEEN JAVA AND JAVASCRIPT
+--------------------------------------
+    JAVA                                                  JAVASCRIPT
+    ----------------------------------------------------------------------------------
+    ->Java is Object Oriented programming language   ->Js is the scripting language as well 
+                                                        as Object base programming language
+    ->in java both compiler and interpreter present  ->It have only interpreter
+    ->it will support multi threading                ->it will supportsingle call stack
+    ->it is imperative in nature                     ->it is dynamically typed( In JS no need to 
+                                                        define data types or data type to the variable)
+    ->it is strictly typed                           ->weekly typed
+
+    ->supports interface                              ->does not support interface
+
+
+
+    TOKENS
+    ----------
+    ->
+    Tokens are the smallest units/elements in the JS programming
+
+    classification:
+    1.Identifiers:
+        ->Identifiers are the names given to Js code
+        ex: variable names,fn names,class names
+        Rules:
+        cant start with numbers
+        does not include spaces
+        ->w=in place of Identifiers we cant use Keywords
+    2.Literals
+        ->these are the values given to the js code
+        ->types:;;
+                1.string Literals
+                2.numerical Literals
+    3.Keywords
+        `->A predefined words which having its own meaning
+        ->In JS we have 66 Keywords present
+        ->ex: int , char, function , float , boolean , class ,
+        var , let , const  , else , for , do , while , if , switch , break ,
+        if , default , double , return , export , exports , finally , try , catch ,
+        super , this , throw , package , public , void , null , import , get , set , abstract , assert ,
+    4.Separators
+        ->these are used to separate te js code 
+        ex:
+          [],{},(),,.,;,"",'',<>,``
+    5.Operators
+        -> these are used perform operation on operands
+        ex 10-20
+
+        types:
+            1.Assignment (-=,+=,*=,/=,=,%=)
+            2.Relational(>,<,<=,>=)
+            3.Logical(&&,||,!)
+            4.Arithmeic(=,-,*,%,/,**)
+            5.Bitwise(&,|,^)
+            6.Unary(++,--)
+            7.Ternary (condition ? expr1: expr2)
+            8.Shift (>>,<<)
+            9.Comparsional(==(only value),===(check value and data type),!=)
+    6.Comments
+        ->These are used to comment the given code 
+        type
+            1.singe line //
+            2.multi line /* 
+                                                */
+
+DATATYPES:;
+-------------
+    ->DATATYPES represents the what type of data we storing on variables
+
+    types:
+        1.primitive(inmutuable)
+            1.numbers
+            2.string
+            3.boolean
+            4.null
+            5.undefine
+            6.symbol
+            7.bigInt
+        2.Non primitive(mutable, object de-referencing)
+            1.Arrays
+            2.Object
+            3.function
+            4.classtypes
+VARIABLES:
+-------------------
+->variables are named memory loaction used to store data or values
+ and it can change N no of times during execution.
+
+ 1.variable declaration
+ 2.variable initialisation
+ 3.variable utilisation
+ 4.variable re- initialisation
+ 5.variable re- declaration
+
+in js we can define variables in 3 ways
+----------------------------------------
+1.let
+    ->let variables act as a local scope / block scope
+    ->variable declaration and initialisation is possible in same / different line
+    ->re- initialisation is possible but not re declaration
+    ->we cant hoist the let variables
+
+2.var
+    ->var variables acts like a global scop(because var present in windows objectively)
+    ->variable re-declaration and initialization is same/different line is possible
+    ->we can hoist the var variable
+    ->variable declaration and initialisation is possible in same / different line
+
+3.const
+    ->const variables acts like a global final(because once initialisation we cant modify data/values)
+    ->variable re-declaration and initialization is same line is not possible 
+    ->we cant hoist the var variable
+    ->variable declaration and initialisation is possible in same  line but not in different line
+
+
+
+
+    Hoisting:
+    ------------
+      ->Utilizing the variables before declaration.
+      ->Hoisting is possible only through 'var' variable.
+      
+STRINGS:
+-----------------------
+strings are group of characters
+we can define in 3 ways
+    1."" 
+    2.''
+    3.`` template string interpretation
+
+        string inbuilt functions:
+        ----------------------
+Arrays
+------------
+  ->Arrays are the linear data structures used to store homogeneous(same type of data) or heterogeneous(different types of data) types of data
+  ->Array size is not fixed.
+
+
+Ways to declare array:
+---------------------------
+   1.1.Literal ways
+   2.Using new keyword (array Object)
+
+Functions/methods:
+--------------------------
+    ->function is a block of statements which will get execute whenever we called or invoke function
+    ->using fn ecan improve code readability and reusabilty
+
+    we have 2 types of functions:
+    1.User defined functions
+    --->any functions that is declared by user or  programmer as per their requirement
+    2.predefined functions
+    --->it means built in functions
+
+
+
+JS FUNCTION types
+-----------------------
+    1.Anonymous function
+
+    2.Normal / named function
+    3.Functional expression
+    4.Immediate invoking / self calling function
+        ONLY ONCE THROUGHOUT ITS LIFECYCLE
+        you cant acccess outside the block
+    5.Arrow function//introduced by ES6 (ecma script)
+    6.Nested function
+    7.Higher order function
+        any fn that acccept another function as parameter
+    8.callback function
+        any fn passing as a value r=to the Higher order function
+    9.generator function
+        
+
+OBJECTS:
+--------------
+    ->Objects are real time entities which used to store data n the form 
+    of key and value pair
+
+
+    1.Literal way
+    2.using keyword(create for object class)
+
+    BOM
+    ------
+        BROWSER OBJECT MODEL
+        ->one of the pre  built object present in every browser
+        ->it contains windows object
+        ->methods like console are present in browser
+        methods like prompt, alert, console(log,error,warn,info,table....),sssion storage, fetch, local storage
+    https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=DOM%20IN%20JAVASCRIPT.drawio&dark=1#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1wX_N7YJu17-dNlZGfupcKyvlNTD-s39u%26export%3Ddownload#%7B%22pageId%22%3A%22w0W7gVwtxNn_7I0n7kZZ%22%7D
+
+DOM(DOCMENT OBJECT MODEL)
+-----------------------------
+        ->DOM are used to manipulate HTML and CSS
+        ->to build dynamic web pages
+        we can apply events in 3 different ways applied
+        1.attribute way
+        2.property way
+        3.add event listener
+
+   Loops:
+   -----
+   ->they are used to iterate the statements no of times until condition become satisfied
+   1.for Loop
+     Syntax:
+             for(initialization;condition;increment/decrement){
+
+             }
+   2.while Loop
+     Syntax:
+          while(condition){
+            increment/decrement;
+          }  
+   3.do while Loop
+      syntax:
+         do{
+            increment/decrement;
+           }while(condition);
+   4.for-in Loop
+         ->for-in loop is used to iterate strings,Arrays
+         ->for-in loop is used to fetch only index index
+
+         syntax:
+            for(variable in string/array){
+
+            }
+   5.for-of Loop
+         ->for-of loop is used to iterate strings,Arrays
+         ->for-of loop is used to fetch only index value
+
+          syntax:
+             for(variable in string/array){
+
+             }
+
+   6.forEach loop     
+       ->forEach() is Higher order function used to iterate Arrays
+
+       syntax:
+           Array.forEach((value,index,array)=>{
+            
+           })
+
+
+
+           1.map ()
+           2.filter()
+           3.reduce()  
+
+     spread operations are used to split nd merge objects and arrays
+
+spread operators :Es 6  
+------------------------
+    ->  Array   
+    -> objects 
+
+JSON(javascript object notation) : 
+----------------------------------
+    ->JSON is similar to javascript Object 
+    Ex: 
+       [ {
+            'name':'ravi',
+            'rollNo':500,
+            'active':true
+        },{
+            'name':'rani',
+            'rollNo':520,
+            'active':true
+        }
+        ]
+
+
+
+Asynchronous Javascript : 
+-------------------------
+    ->
+
+
+Type Casting : 
+--------------
+    ->Converting one type of data into another type 
+    ->types 
+        1. internal/ implicit type casting  
+            ->JS engin will Convert one type to another data type internally 
+        2. External/ explicit type casting 
+            ->programmer's or users Converting one type to another data type forcefully 
+
+    
+
+
+Time Intervals : 
+----------------
+    1. setTimeout() 
+    2. setIntervals()
+
+        ->This both functions are higher order functions 
+
+
+
+Promises : 
+----------
+    ->Promises in Javascript is the object used to handle evualtial completion(or failed) of the results 
+
+    ->

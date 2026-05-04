@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //anonymous fn
+        let funExample = function () {  //entire is called functional expression
+            let username = "mahi@123"; //actual parameters
+            let password = "mahi@1330";
+            console.log(username);
+            console.log(password);
+            console.log("This is functional expression");
+        }
+        funExample()
+        funExample()
+        //functional parameters
+        let funExample1 = function (user, pass) {
+            console.log(user);
+            console.log(pass);
+            console.log("This is functional expression");
+        }
+        funExample1('10', "hjgv")
+        funExample1("mahi", "0809")
+
+        //return typed
+        let userdetails = function (userName, Password) {
+            console.log("This is functional expression");
+            return userName + "" + Password //loop will stop
+            console.log("hello"); //not worked only one time return will worked
+            return "hello"
+
+        }
+        console.log(userdetails("mahi", 'sandy'));
+
+
+        let result = userdetails("mahi@123", '178');
+        console.log(result);
+
+        //normal function
+        function employeeDetails(name, role, salary, address) {
+            /*console.log("This is normal function..");
+            console.log("Name:",name);
+            console.log("Role:",role);
+            console.log("Salary:",salary);
+            console.log("Adress:",address);*/
+            return [name, role, salary, address]
+        }
+        let emp1 = employeeDetails("Mahi", "developer", 9000, "kochi");
+        console.log(emp1);
+
+            //IMMEDIATE invoking function
+
+            (function () {
+                let apiKey = "AIzaSyAT2ryesLgWJqhhvlqQg6c5kWa1qj9UTHU";
+
+                console.log("This is IMMEDIATE import invoking function")
+               
+                return apiKey;
+            })()
+        //arrow function
+        let arrowfun=()=>console.log("arrow function");
+        arrowfun()
+        arrowfun();
+
+        let test = (skills,name) => {
+            let a=19;
+            let b=99;
+            console.log(a,b);            
+            console.log("Name:",name,"Skills:",skills);            
+
+        }
+        test(["node.js","express.js","react.js","mongoDB"],"Mahi")
+
+        //nested function
+           /* function outerfun(){
+                function innerfun(){
+                    console.log("inner function");
+                    innerfun()
+                }
+                console.log("outer function");
+            }
+            outerfun()*/
+
+
+            function outerfun(count){
+                    console.log("outer function");
+                    return function innerfun(){
+                        return count++;
+                        
+                    }
+                }
+              let result1=outerfun(1)
+              console.log(result1());              
+              console.log(result1());
+              
+             
+                function homepage(){
+                    console.log("homepage logic");
+                }
+                function loginpage(){
+                    console.log("loginpage logic");
+                }
+                function registerpage(){
+                    console.log("registerpage logic");
+                }
+                homepage(registerpage(),loginpage())
+
+                function display(fun1, fun2){
+                    fun1();
+                    fun2();
+                }
+                display(()=>{
+                    console.log("1st callback fn");
+                },()=>{
+                    console.log("2nd callback fn");
+                })
+
+                //generator function
+                function* generator(){
+                    yield 10;
+                    yield 50;
+                    console.log("this is generatorfunction");
+                }
+                let nextGen=generator();
+                //nextGen.next()
+                //generator().next()
+                 /*while(nextGen.next().done){
+                    console.log(nextGen.next().value);
+
+                 }*/
+                console.log(nextGen.next());
+                console.log(nextGen.next().value);
+                console.log(nextGen.next());
+    </script>
+</body>
+
+</html>
