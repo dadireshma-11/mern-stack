@@ -1,0 +1,104 @@
+React Js:
+---------
+   ->React Js is the small Js Library
+
+    Features :
+    ->React Js is component Based
+    ->It supports Virtual DOM
+    ->Using React Js we can build (SPA) application
+    ->it will follow defining algorithm
+
+
+Library :
+---------
+     ->Collection of code is called as Library
+     ->Ex:node.js,jQuery,anime js...etc
+
+
+Frameworks:  
+-----------
+->Collection of Library is called as Frameworks
+Ex:Angular Js, next Js,nest Js, Express js,Electron Js, Vue Js
+
+Jsx(javascript and XML[extendable markup language]):
+----------------------------------------------------
+ ->React will understand JSX code but browsers will not understand JSX it understand only JS code (because every browsers having JS engin's)
+ ->To convert JSX code to JS(javascript)we have next-generation compiler called "babel Js"
+
+ ->JSX is similar to HTML , here it allow both JS and HTML code
+        
+      Rules:
+         ->JSX fileNames is always starts with capital letters
+         ->here we can achieve javascript expression ->{}
+         ->In return function HTML elements contains parentTag
+         ->JSX will allow empty fragments(<> </>)
+
+Components In React:
+--------------------
+      ->Components are the smallest UI blocks called as Components
+
+ Types:
+ ---------
+ 1. Class based Components
+    ->Components are declared using class keyword is called as class based Components
+    ->In CBC constructors,super keyword, this keyword is present also render(), and life cycle methods are present
+    ->In CBC state are present so that's why is called as a statefull components 
+
+    syntax:
+          import {Component} from "react";
+          class ClassName extends Component{
+               render(){
+                    return(
+                         html code;
+                    )
+               }
+          }
+          export default ClassName;
+           
+
+ 2.Funtion based components(FBC):   (16.8 -> hooks)
+    ->We can declared FBC using arrow function or normal function or functional expression
+    ->In FBC constructors, super keyword, this keyword not present 
+    ->render() and life cycle methods also not present 
+    ->In FBC state are present so thats why is also called as stateless components
+
+    syntax 1:
+    ---------
+
+    const ComponentName()=>{
+      return(
+          html code here..
+      )
+    }
+    export default ComponentName;
+
+    syntax 2:
+    ----------
+
+    function ComponentName(){
+     return(
+          html code here...
+      )
+    }  
+    export default ComponentName;
+
+    syntax 3:
+    ----------
+
+    const ComponentName=function(){
+       return(
+          html code here...
+        )
+      } 
+    export default ComponentName;
+
+
+
+
+
+    States in Function Based components:
+    ------------------------------------
+
+
+
+
