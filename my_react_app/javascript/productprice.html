@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let productPrice=[500,600,700,650,750];
+          console.log(productPrice);
+
+
+        ///mappingg 10% discount to product prices
+        let mappedPrices =productPrice.map((price)=>{
+          return price-price/10;
+        });
+        console.log(mappedPrices);
+
+
+        //filter discounted products 1000 to 5000rs price
+        //[450, 540, 630, 585, 675]
+        let filteredProducts= mappedPrices.filter((price)=>{
+            return price>=1000&&price<=5000;
+
+          })
+          console.log(filteredProducts);
+
+       //total sum of mappedprices 
+        let totalPrice = mappedPrices.reduce((price, acc) => {
+            return price+acc;
+        },250)
+
+        console.log(totalPrice);
+
+   
+
+
+    </script>
+</body>
+</html>

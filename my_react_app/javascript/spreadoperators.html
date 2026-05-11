@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ,<script>
+        let arr1=[10,20,30,40];
+        let arr2=[50,null,{name:"resh",role:"developer"}, ()=>{console.log("HELLO")}]
+            
+        let arr3=[...arr1,...arr2,"html","css",true];
+        console.log(arr3);
+         //array destructing
+        let [a,b,c,d]=arr1;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        let [g,h,i,j]=arr2;
+        console.log(g);
+        console.log(h);
+        console.log(i);
+        j();
+
+        //spread opertors in object
+        let user={
+            name:"resh",
+            phn:"858552512542"
+        }
+        let orderdetails={
+            productname:"mobile",
+            price:50000,
+            status:"done"
+        }
+        // let orderHistory={...user,...orderdetails};
+        // console.log(orderHistory);
+        let orderHistory={...user,{na}};
+        console.log(orderHistory);
+
+        
+       
+    </script>
+</body>
+</html>

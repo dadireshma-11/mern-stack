@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let body = document.querySelector("body")
+
+        let table = document.createElement("table");
+        let thead = document.createElement('thead');
+        let tr1 = document.createElement("tr");
+        let tbody = document.createElement("tbody")
+        tr1.innerHTML = `<th>Name</th>
+                       <th>RollNo</th>
+                       <th>CNN</th>
+                       <th>CPP</th>
+                       <th>ADE</th>
+                       <th>DSA</th>
+                       <th>Total Marks</th>
+                       <th>Percentage</th>
+                       <th>Actions</th>
+                       `
+
+        thead.appendChild(tr1)
+        table.appendChild(thead)
+        body.appendChild(table)
+        table.appendChild(tbody)
+        table.border = 1
+        table.cellSpacing = 0
+        table.cellPadding = 10
+
+        //student Dumi data
+        let studentDetails = [
+            { name: 'ravi', rollNo: 'HU2025', marks: { CNN: 90, CPP: 98, ADE: 90, DSA: 69 } },
+            { name: 'rani', rollNo: 'HU2026', marks: { CNN: 60, CPP: 88, ADE: 88, DSA: 65 } },
+            { name: 'rani', rollNo: 'HU2026', marks: { CNN: 20, CPP: 28, ADE: 28, DSA: 25 } },
+        ]
+
+        //forEach used to iterate all studentDetails in Array
+        studentDetails.forEach((student) => {
+            let trow = document.createElement('tr');
+            //calculating percentage 
+            let percentage = (student.marks.ADE + student.marks.CPP + student.marks.DSA + student.marks.CNN) / 400 * 100;
+            let bgColor = null;
+
+            //condition to change gbColor based on percentage
+            if (percentage >= 85 && percentage <= 100) {
+                bgColor = "#00ff00";
+            } else if (percentage >= 65 && percentage <= 84) {
+                bgColor = "yellow"
+            } else if (percentage >= 55 && percentage <= 64) {
+                bgColor = "orange"
+            } else {
+                bgColor = "red"
+            }
+
+            trow.style.backgroundColor = bgColor;
+            trow.innerHTML = `
+                            <td>${student.name} </td>
+                            <td>${student.rollNo} </td>
+                            <td>${student.marks.CNN} </td>
+                            <td>${student.marks.CPP} </td>
+                            <td>${student.marks.ADE} </td>
+                            <td>${student.marks.DSA} </td>
+                            <td>${student.marks.ADE + student.marks.CPP + student.marks.DSA + student.marks.CNN} </td>
+                            <td>${percentage} %</td>
+                            <td>
+                                 <button>Edit</button>
+                                 <button>Delete</button>
+                            </td>
+                            `
+            tbody.appendChild(trow)
+
+        })
+
+
+    </script>
+</body>
+
+</html>

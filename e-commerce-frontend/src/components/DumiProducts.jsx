@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { CartContext } from "../App";
+import { CartContext } from "../service/CartProvider";
 
 function DumiProducts() {
   let products = [
@@ -38,7 +38,6 @@ function DumiProducts() {
     <Row xs={1} md={4} className="g-4">
       {products.map((item, idx) => {
       const isPresent= items.some((product)=>product.id==item.id);
-      console.log("Is present",isPresent);
       
         return (
           <Col key={idx}>

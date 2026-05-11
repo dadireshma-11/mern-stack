@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            transition: background-color 0.3s ease;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Background Color Changer</h2>
+
+    <button onclick="changeColor('Black')">Black</button>
+    <button onclick="changeColor('violet')">violet</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <br>
+    <button onclick="resetColor()">Reset</button>
+
+    <script>
+        const originalColor = document.body.style.backgroundColor;
+
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function resetColor() {
+            document.body.style.backgroundColor = originalColor || 'white';
+        }
+    </script>
+
+</body>
+</html>

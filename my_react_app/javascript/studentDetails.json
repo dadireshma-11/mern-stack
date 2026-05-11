@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ravi",
+    "rollNo": 500,
+    "active": true
+  },
+  {
+    "name": "rani",
+    "rollNo": 520,
+    "active": true
+  },
+  {
+    "name":"teja",
+    "rollNo":650,
+    "active":false ,
+    "skills":["html","css"],
+    "address":{
+        "city":"vizag",
+        "pincode":561230
+    }
+  }
+]

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tbody tr:nth-child(odd){
+            background-color: aqua;
+        }
+       
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <input type="search" placeholder="search employee">
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+         <tr bgcolor="orange">
+            <th>Name</th>
+            <th>Role</th>
+            <th>Salary</th>
+            <th>Address</th>
+            <th>Phone No</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>Mahi</td>
+            <td>Developer</td>
+            <td>90000</td>
+            <td>Vizag</td>
+            <td>2565325345</td>
+           </tr>
+           <tr>
+            <td>Sandy</td>
+            <td>Test engineer</td>
+            <td>100000</td>
+            <td>HYd</td>
+            <td>5684564845</td>
+           </tr>
+           <tr>
+            <td>Surekha</td>
+            <td>rpa Developer</td>
+            <td>200000</td>
+            <td>pondy</td>
+            <td>6536856532</td>
+           </tr>
+           <tr>
+            <td>manasa</td>
+            <td>rpa Developer</td>
+            <td>100000</td>
+            <td>hyd</td>
+            <td>685322582</td>
+           </tr>
+
+        </thead>
+
+    </table>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, reiciendis amet molestias obcaecati facere debitis cum ipsam modi enim nesciunt consequatur necessitatibus quos quis atque exercitationem perferendis dolores a alias?
+    </p>
+
+    <button onclick="disappearParagraph()">Click Here </button>
+    <script> 
+
+      function disappearParagraph() {
+         let para=document.querySelector("p");
+         para.style.display=(para.style.display=="block") ?  "none" : "block"     
+      }
+       let rows=document.querySelectorAll("tbody tr");
+       let input=document.querySelector("input");
+       input.addEventListener('keyup',()=>{
+            let inputText=input.value.toLowerCase()
+             rows.forEach((row)=>{
+               let rowData=row.textContent;
+               let result =rowData.toLowerCase().includes(inputText)
+               console.log(result);
+                row.style.display=result ? " " : "none"
+       })
+    })
+       //input.onkeyup=()=>{
+       //}
+
+        
+    </script>
+</body>
+</html>
