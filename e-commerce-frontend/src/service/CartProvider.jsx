@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/set-state-in-render */
+
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
@@ -11,13 +13,27 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const [isLogin, setIsLogin] = useState(true);
+  
+  //function to get stored token
+  const getToken = () => {
+    const token = localStorage.getItem("token")?true:false;
+    setIsLogin(token);
+  };
+
+  useMemo(() => {
+    getToken();
+  }, []);
+
+
+
   const removeToCart=(product)=>{
        const afterRemovedProducts=items.filter((item)=>item.title!=product.title);
        setItems(afterRemovedProducts);
   }
 
   return (
-    <CartContext.Provider value={{ items, addToCart,removeToCart }}>
+    <CartContext.Provider value={{ items, addToCart,removeToCart,isLogin, setIsLogin }}>
       {children}
     </CartContext.Provider>
   );

@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/set-state-in-render */
 import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,35 +10,65 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../service/CartProvider";
 
 function NavBar() {
-  const { items } = useContext(CartContext);
+  const { items, isLogin, setIsLogin } = useContext(CartContext);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLogin(false);
+  };
+
   return (
-    <div id="navbar-container" style={{position:"sticky",top:"0px",zIndex:"3"}}>
+    <div
+      id="navbar-container"
+      style={{ position: "sticky", top: "0px", zIndex: "3" }}
+    >
       <Navbar expand="lg" id="nav-container">
         <Container>
-          <Navbar.Brand href="/home">Alpha Mart</Navbar.Brand>
+          <Navbar.Brand>
+            <Link id="brand-name" to="/">
+              Alpha Mart
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link>
+                {" "}
+                <Link to="/home"> Home</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/register">Register</Link>
+              </Nav.Link>
               <NavDropdown title="Products" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/products">
-                  View Products
+                <NavDropdown.Item>
+                  <Link to="/products">View Products</Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="">Edit Products</NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="">Edit Products</Link>
+                </NavDropdown.Item>
                 <NavDropdown.Item>
                   <Link to="/cart">Cart Products</Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="">Delete Product</NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="">Delete Product</Link>
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="">View Users</NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="">View Users</Link>
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
 
-        <button id="login-btn" className="btn btn-primary">
-          <Link to="/login">Login</Link>
+        <button
+          id="login-btn"
+          className="btn btn-primary"
+          onClick={handleLogout}
+        >
+          <Link to={isLogin ? "/login" : "/home"}>
+            {isLogin ? "LogIn" : "LogOut"}
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -55,9 +88,7 @@ function NavBar() {
           </svg>
         </button>
         <button id="cart-btn">
-          <Link to="/cart">
-          Cart {items.length}
-          </Link>
+          <Link to="/cart">Cart {items.length}</Link>
         </button>
       </Navbar>
     </div>

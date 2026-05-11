@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [loginDetails, setLoginDetails] = React.useState({
@@ -10,6 +11,7 @@ const Login = () => {
     otp: "",
   });
 
+  const navigate = useNavigate();
   let [mailOtp, setMailOtp] = useState(0);
 
   //function to fetch input values
@@ -39,8 +41,8 @@ const Login = () => {
         otp: generatedOtp,
         time: expiredTime,
       };
-      await emailjs.send("service_mtec3w5", "template_ah26kfi", formData, {
-        publicKey: "Wv9TfUHYeeNFMRTYz",
+      await emailjs.send("service_9l1dihp", "template_7bth6c8", formData, {
+        publicKey: "N3xga7GAtw352Ac-q",
       });
 
       toast.success("otp send to ur mail successfully");
@@ -54,10 +56,20 @@ const Login = () => {
   const handleLogin = (e) => {
     try {
       e.preventDefault();
-      if (mailOtp == loginDetails.otp && loginDetails.password != "") {
+      if (
+        mailOtp != "" &&
+        mailOtp == loginDetails.otp &&
+        loginDetails.password != ""
+      ) {
         toast.success("login successful");
+        localStorage.setItem("token", "241sadgghs3546adDh");
+        setTimeout(() => {
+          navigate("/home");
+        }, 3000);
       } else if (mailOtp != loginDetails.otp) {
         toast.warn("invalid otp");
+      } else {
+        toast.error("failed to login");
       }
 
       console.log(loginDetails);
